@@ -2,8 +2,8 @@
 //  CRUD.swift
 //  swift-coredata
 //
-//  Created by Telman Rustam on 2017-02-26.
-//  Copyright © 2017 Telman Rustam. All rights reserved.
+//  Created by Telman Rustam on 2020-06-13.
+//  Copyright © 2020 Telman Rustam. All rights reserved.
 //
 
 import Foundation

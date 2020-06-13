@@ -2,8 +2,8 @@
 //  CoreDataStack.swift
 //  swift-coredata
 //
-//  Created by Telman Rustam on 2017-02-26.
-//  Copyright © 2017 Telman Rustam. All rights reserved.
+//  Created by Telman Rustam on 2020-06-13.
+//  Copyright © 2020 Telman Rustam. All rights reserved.
 //
 //https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/FetchingObjects.html
 //Core Data Programming Guide
