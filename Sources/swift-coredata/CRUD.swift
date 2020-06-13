@@ -1,6 +1,6 @@
 //
-//  CRUDHelper.swift
-//  iBallisticDBUI
+//  CRUD.swift
+//  swift-coredata
 //
 //  Created by Telman Rustam on 2017-02-26.
 //  Copyright © 2017 Telman Rustam. All rights reserved.
@@ -35,6 +35,8 @@ open class CRUD{
         return fetchedResultsController
     }
     
+    
+    /// Save changes
     public func save(){
         if (self.managedObjectContext?.hasChanges)! {
             do {
@@ -57,36 +59,20 @@ open class CRUD{
         }
     }
     
-    //    public func delete(entity : String,  predicateFormat : String, argumentArray: String) {
-    //        let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-    //        fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray)
-    //        do {
-    //            if let results = try managedObjectContext!.fetch(fetchRequest) as? [NSManagedObject] {
-    //                let fetched = results as? [NSManagedObject]
-    //                if fetched != nil {
-    //                    print("Number of records \(fetched?.count)")
-    //                    for item in fetched!{
-    //                        managedObjectContext?.delete(item)
-    //                    }
-    //                }
-    //            }
-    //        }
-    //        catch {
-    //            fatalError("There was an error fetching the items")
-    //        }
-    //    }
     
+    /// <#Description#>
+    /// - Parameters:
+    ///   - entity: table name
+    ///   - predicateFormat: predicateFormat
+    ///   - argumentArray: an array of arguments
     public func delete(entity : String,  predicateFormat : String, argumentArray: [Any]?) {
         let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
         fetchRequest.predicate = NSPredicate(format: predicateFormat, argumentArray!)
         do {
             if let results = try managedObjectContext!.fetch(fetchRequest) as? [NSManagedObject] {
-                let fetched = results as? [NSManagedObject]
-                if fetched != nil {
-                    print("Number of records \(fetched?.count)")
-                    for item in fetched!{
-                        managedObjectContext?.delete(item)
-                    }
+                print("Number of records \(String(describing: results.count))")
+                for item in results{
+                    managedObjectContext?.delete(item)
                 }
             }
         }

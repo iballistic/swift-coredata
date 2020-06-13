@@ -35,8 +35,8 @@ public class CoreStackData{
     
     /// Description
     /// - Parameters:
-    ///   - bundleIdentifierName: bundleIdentifierName description
-    ///   - model: model name
+    ///   - bundleIdentifierName: app bundle name
+    ///   - model: core data model file name (database file name)
     public init(bundleIdentifierName: String, model : String){
         self.modelName = model
         self.bundleIdentifier = Bundle(identifier: bundleIdentifierName)!
@@ -45,9 +45,9 @@ public class CoreStackData{
     
     /// Description
     /// - Parameters:
-    ///   - bundleIdentifierName: bundleIdentifierName description
-    ///   - model: model description
-    ///   - storeInFolder: storeInFolder description
+    ///   - bundleIdentifierName: app bundle name
+    ///   - model: core data model file name (database file name)
+    ///   - storeInFolder: a sub folder name to store core data model
     public init(bundleIdentifierName: String, model : String, storeInFolder: String?){
         self.modelName = model
         self.storeInFolder = storeInFolder
