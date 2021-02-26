@@ -73,7 +73,7 @@ public class CoreStackData{
         
         // The managed object model for the application. This property is not optional.
         // It is a fatal error for the application not to be able to find and load its model.
-        // core data is no longer is main bundle use code
+        // core data is no longer in main bundle
         let modelURL = self.bundle.url(forResource: self.model, withExtension: "momd")
         return NSManagedObjectModel(contentsOf: modelURL!)!
     }()
